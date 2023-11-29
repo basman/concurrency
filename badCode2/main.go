@@ -36,8 +36,6 @@ func process() {
 
 	monitor.RegisterFilter(filterRegId)
 
-	fmt.Println("Catch me on TCP port 2023...")
-
 	// send timed messages
 	for _, d := range data {
 		go func(delay int, msg string) {
