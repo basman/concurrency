@@ -9,6 +9,10 @@ import (
 	"path/filepath"
 )
 
+/*
+	Look at the warnings of your IDE in the code below. Do you see an issue with resource management?
+*/
+
 func main() {
 	files, err := filepath.Glob("/etc/*")
 	if err != nil {
