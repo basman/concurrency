@@ -21,7 +21,8 @@ In many enterprise projects your packages will need a logger to properly generat
 i.e. with a timestamp. If each package creates its own logger, the messages will not only look
 different. They also might end up at different places.
 
-Create a logger at only one place, which is `main()`.
+Create a logger at only one place, which is `main()`, using the custom log package of this
+project.
 
 Use the `log.ContextWithValue()` method to enrich your context with that logger and pass the
 context it returns to the `Run()` methods. They can then use `FromContext()` to get hold of

@@ -54,27 +54,27 @@ func (l *Logger) SetLevel(level string) error {
 }
 
 func (l *Logger) Debug(msg string, values ...any) {
-	l.log(LevelDebug, msg, values)
+	l.log(LevelDebug, msg, values...)
 }
 
 func (l *Logger) Info(msg string, values ...any) {
-	l.log(LevelInfo, msg, values)
+	l.log(LevelInfo, msg, values...)
 }
 
 func (l *Logger) Warn(msg string, values ...any) {
-	l.log(LevelWarn, msg, values)
+	l.log(LevelWarn, msg, values...)
 }
 
 func (l *Logger) Error(msg string, values ...any) {
-	l.log(LevelError, msg, values)
+	l.log(LevelError, msg, values...)
 }
 
 func (l *Logger) Fatal(msg string, values ...any) {
-	l.log(LevelFatal, msg, values)
+	l.log(LevelFatal, msg, values...)
 }
 
 func (l *Logger) Panic(msg string, values ...any) {
-	l.log(LevelPanic, msg, values)
+	l.log(LevelPanic, msg, values...)
 }
 
 func (l *Logger) log(level level, msg string, values ...any) {
@@ -84,7 +84,7 @@ func (l *Logger) log(level level, msg string, values ...any) {
 
 	msgExpand := msg
 	if len(values) > 0 {
-		msgExpand = fmt.Sprintf(msg, values)
+		msgExpand = fmt.Sprintf(msg, values...)
 	}
 
 	log.Println(msgExpand)
