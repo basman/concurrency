@@ -29,7 +29,7 @@ const (
 
 func NewConsoleLogger(level string) *Logger {
 	l := &Logger{
-		level: LevelFromString(level),
+		level: levelFromString(level),
 	}
 
 	if level == "" {
@@ -44,7 +44,7 @@ func NewConsoleLogger(level string) *Logger {
 }
 
 func (l *Logger) SetLevel(level string) error {
-	lvl := LevelFromString(level)
+	lvl := levelFromString(level)
 	if lvl == LevelUnknown {
 		return errors.New("unknown level")
 	}
@@ -103,7 +103,7 @@ const (
 	panicLevel = "panic"
 )
 
-func LevelFromString(lvl string) level {
+func levelFromString(lvl string) level {
 	switch strings.ToLower(lvl) {
 	case debugLevel:
 		return LevelDebug
@@ -121,12 +121,12 @@ func LevelFromString(lvl string) level {
 	return LevelUnknown
 }
 
-const ContextKey = "__logger__"
+const contextKey = "__logger__"
 
 func FromContext(ctx context.Context) *Logger {
-	return ctx.Value(ContextKey).(*Logger)
+	return ctx.Value(contextKey).(*Logger)
 }
 
 func (l *Logger) ContextWithValue(ctx context.Context) context.Context {
-	return context.WithValue(ctx, ContextKey, l)
+	return context.WithValue(ctx, contextKey, l)
 }
