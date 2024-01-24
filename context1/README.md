@@ -30,3 +30,7 @@ the logger and use it for any messages.
 
 In this example constructors can not fail. But if they do in your projects, have them return 
 errors, so `main()` can fail immediately.
+
+# Bonus: Improve the time format of the logger
+
+https://stackoverflow.com/questions/26120698/how-to-change-the-date-time-format-of-gos-log-package
