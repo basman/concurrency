@@ -1,6 +1,8 @@
 package main
 
 import (
+	"encoding/json"
+	"fmt"
 	"io"
 	"os/exec"
 )
@@ -12,11 +14,6 @@ import (
 
 	Thanks to Norman for this example.
 */
-
-import (
-	"encoding/json"
-	"fmt"
-)
 
 func ExecAndMarshall(command []string, out interface{}) error {
 
