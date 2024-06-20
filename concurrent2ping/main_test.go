@@ -1,7 +1,7 @@
 package main
 
 import (
-	"concurrent2/ping"
+	"concurrent2ping/ping"
 	"testing"
 	"time"
 )

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"concurrent2ping/ping"
 	"fmt"
 	"time"
 )
@@ -10,10 +11,6 @@ import (
    Rule:      Only change main.go, do not change ANY OTHER file.
    Definition of done: ALL unit tests in this project show green, ping/*_test.go included.
 */
-
-import (
-	"concurrent2/ping"
-)
 
 func pingAll(jobs chan ping.Host) (int, int) {
 	// TODO for every job provided by the input channel call Host.Ping() once
