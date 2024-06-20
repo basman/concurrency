@@ -1,0 +1,26 @@
+go 1.20
+
+use (
+  ./appendBug
+  ./badCode2
+  ./busyLoop1
+  ./busyLoop2
+  ./concurrent1
+  ./concurrent2ping
+  ./context1
+  ./dataRace1
+  ./deadlock1
+  ./embeddingComposition
+  ./errorGroup
+  ./factorial
+  ./genericUnmarshal
+  ./mapSharedRead1
+  ./mapSharedWrite1
+  ./pkgArch
+  ./rangeGlitch1
+  ./resources2defer
+  ./singleton
+  ./sort1
+  ./unitTests1
+  ./unitTests3Mock
+)
