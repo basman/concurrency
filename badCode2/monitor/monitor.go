@@ -30,7 +30,7 @@ func resetGlobals() {
 	distributor.filterChan = make(map[int](chan string))
 	distributor.ctx, stop = context.WithCancel(context.Background())
 	// Create channel for error handling
-	// This is a buffered channel in case, the logging can't handle that much and fast stuff (should not happen...)
+	// This is a buffered channel in case, the log can't handle that much and fast stuff (should not happen...)
 	errmsg = make(chan string, 512)
 }
 
