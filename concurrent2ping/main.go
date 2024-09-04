@@ -27,7 +27,7 @@ func main() {
 	startPing := time.Now()
 	fmt.Printf("loaded hosts from %v\n", hostsFilename)
 
-	hostCount, reachableCount := pingAll(jobCh)
+	reachableCount, hostCount := pingAll(jobCh)
 	stopPing := time.Now()
 
 	fmt.Printf("TIMING %v to parse %v hosts\n", startPing.Sub(startProg), hostCount)

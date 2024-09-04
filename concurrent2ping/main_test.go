@@ -55,7 +55,7 @@ func Test_pingAll_Concurrency(t *testing.T) {
 	start := time.Now()
 
 	// act
-	hostCount, reachCount := pingAll(ch)
+	reachCount, hostCount := pingAll(ch)
 
 	// assert
 	end := time.Now()
