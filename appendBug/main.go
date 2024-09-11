@@ -1,5 +1,14 @@
 package main
 
+/*
+   The function removeIndex() is not as innocent as it looks.
+   Run the unit test or main.go and see for yourself. The
+   function is not supposed to modify the slice that belongs
+   to the caller.
+
+   Find an implementation that passes all unit tests.
+*/
+
 import "fmt"
 
 func removeIndex(s []int, index int) []int {
