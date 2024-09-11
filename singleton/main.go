@@ -1,5 +1,15 @@
 package main
 
+/*
+   Run this code with "go run -race main.go" and fix any race condition.
+
+   Don't touch main.go, apply your fix in package oneOfAKind.
+   Keep the function signature used by the caller as it is.
+   Also keep the behavior. First ID returned shall be 0.
+
+   Remember: don't communicate by sharing, share by communicating.
+*/
+
 import (
 	"fmt"
 	"singleton/oneOfAKind"
@@ -8,10 +18,10 @@ import (
 func main() {
 	ch := make(chan int)
 
-	go func(){
+	go func() {
 		ch <- oneOfAKind.GetId()
 	}()
-	go func(){
+	go func() {
 		ch <- oneOfAKind.GetId()
 	}()
 
