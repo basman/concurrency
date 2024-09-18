@@ -18,10 +18,10 @@ func removeIndex(s []int, index int) []int {
 func main() {
 	s := []int{7, 1, 12, 3, 89, 5, 6, 13, 8, 9}
 	cpy := s[:]
-	fmt.Printf("s   before removeIndex: %v\n", s)
+	fmt.Printf("s   before removeIndex:\t\t%v\n", s)
 
 	s1 := removeIndex(s[:], 2)
-	fmt.Printf("s   after removeIndex: %v (should be same as s before)\n", s)
-	fmt.Printf("cpy after removeIndex: %v (should be same as s before)\n", cpy)
-	fmt.Printf("value 12 (idx=2) removed: %v\n", s1)
+	fmt.Printf("s   after removeIndex:\t\t%v (should be same as s before)\n", s)
+	fmt.Printf("cpy after removeIndex:\t\t%v (should be same as s before)\n", cpy)
+	fmt.Printf("value 12 (idx=2) removed:\t%v\n", s1)
 }
